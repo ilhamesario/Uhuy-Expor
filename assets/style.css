@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Merriweather+Sans:wght@400;700&family=Montserrat:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #1f1f38;
+  --color-bg-variant: #2c2c6c;
+  --color-primary: #4db5ff;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  width: 100%;
+  background: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.7;
+  background-image: url(../assets/images/bg-texture.png);
+  /* font-family: 'Montserrat', sans-serif; */
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  margin: 40px;
+}
+
+.section-m1 {
+  margin: 30px 0;
+}
+
+/* header start */
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#header a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#mobile {
+  display: none;
+  align-items: center;
+}
+
+#close {
+  display: none;
+}
+
+/* header end */
+
+/* Home page start */
+
+#hero {
+  background-image: url(../assets/images/hero3.jpg);
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0;
+  padding: 80px 80px;
+}
+
+#hero h4 {
+  padding-bottom: 15px;
+}
+
+#hero h2 {
+  color: #088178;
+}
+
+/* home page end */
+
+/* about us start */
+
+#about {
+  padding: 92px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#about h2 {
+  color: var(--color-primary);
+}
+#about p {
+  color: white;
+  text-align: left;
+}
+
+/* about us end */
+
+/* gallery start */
+#gallery {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#gallery h2 {
+  color: var(--color-primary);
+}
+
+#gallery .box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#gallery .box .dream {
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+}
+#gallery .box .dream img {
+  width: 100%;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+
+#gallery .btn {
+  margin: 30px;
+  background: #222;
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+
+#gallery .btn a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bolder;
+  letter-spacing: 3px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.ccontainer {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  padding-top: 40%;
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* gallery end */
+
+/* product start */
+#product {
+  padding-top: 60px;
+  text-align: center;
+}
+
+#product h2 {
+  color: var(--color-primary);
+}
+
+.img-wrapper {
+  max-width: 100%;
+  height: 65vw;
+  display: flex;
+  justify-content: center;
+}
+
+#product img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 1.5rem;
+  margin-top: 20px;
+}
+
+.card-title,
+.card-text {
+  color: white;
+}
+
+#product .card:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+}
+
+@media screen and (min-width: 576px) {
+  .carousel-inner {
+    display: flex;
+  }
+  .carousel-item {
+    display: block;
+    margin-right: 0;
+    flex: 0 0 calc(100% / 3);
+  }
+
+  .img-wrapper {
+    height: 23vw;
+  }
+}
+
+.carousel-inner {
+  padding: 1em;
+}
+
+.card {
+  margin: 0 0.5em;
+  border-radius: 2rem;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  background-color: #2c2c6c;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 6vh;
+  height: 6vh;
+  background-color: black;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+}
+/* product end */
+
+/* Contact start */
+#contact h2 {
+  color: var(--color-primary);
+}
+
+/* Contact end */
+
+/* footer start */
+footer {
+  background-color: black;
+}
+/* footer end */
+
+/* media query start */
+@media screen and (max-width: 768px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 200px;
+    background-color: #e3f6e3;
+    box-shadow: 0 40px 60px black;
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+  #navbar.active {
+    right: 0px;
+  }
+  #navbar li {
+    margin-bottom: 25px;
+  }
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+  #mobile i {
+    color: black;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+  #close {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: black;
+    font-size: 24px;
+  }
+  #hero {
+    height: 70vh;
+    background-position: top 30% right 30%;
+    padding: 80px 80px;
+  }
+
+  #gallery .box {
+    flex-direction: column;
+  }
+
+  #gallery .box .dream {
+    width: 100%;
+  }
+}
+
+/* media query end */
